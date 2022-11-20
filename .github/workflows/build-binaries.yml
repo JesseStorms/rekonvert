@@ -1,0 +1,36 @@
+name: Build and publish binaries
+
+on:
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.16.1
+      - name: Set up Node LTS
+        uses: actions/setup-node@v1
+        with:
+          node-version: lts/*
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        run: pnpm run build
+      - name: Package binaries
+        run: pnpm run package
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            rekonvert-linux
+            rekonvert-macos
+            rekonvert-win.exe
+            LICENSE.md
+
+
