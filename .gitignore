@@ -87,3 +87,6 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 /build
+/rekonvert-linux
+/rekonvert-macos
+/rekonvert-win.exe
