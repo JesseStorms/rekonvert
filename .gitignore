@@ -90,3 +90,4 @@ typings/
 /rekonvert-linux
 /rekonvert-macos
 /rekonvert-win.exe
+*.exe
