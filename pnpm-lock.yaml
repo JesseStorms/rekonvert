@@ -4,17 +4,13 @@ specifiers:
   '@types/node': ^18.11.9
   '@types/yargs': ^17.0.13
   fast-xml-parser: ^4.0.12
-  fs: 0.0.1-security
   pkg: ^5.8.0
-  promises: link:fs\promises
   replace-in-file: ^6.3.5
   typescript: ^4.9.3
   yargs: ^17.6.2
 
 dependencies:
   fast-xml-parser: 4.0.12
-  fs: 0.0.1-security
-  promises: link:fs/promises
   replace-in-file: 6.3.5
   yargs: 17.6.2
 
@@ -370,10 +366,6 @@ packages:
 
   /fs.realpath/1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
-    dev: false
-
-  /fs/0.0.1-security:
-    resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==}
     dev: false
 
   /function-bind/1.1.1:
